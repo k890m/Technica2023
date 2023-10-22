@@ -1,9 +1,16 @@
 * {
   background-color: #eea6fc;
+  padding-top: 5px;
 }
 
 h1{
     text-align: center;
+    font-family: "Press Start 2P";
+}
+
+p {
+  font-family: "Press Start 2P";
+  line-height: 2;
 }
 
 #slider-container {
@@ -19,11 +26,16 @@ h1{
 }
 
 .slide {
-  min-width: 100%;
+  min-width: 50%;
+}
+
+.slide-E {
+  min-width: 40%;
 }
 
 #prev,
-#next {
+#next,
+#choice {
   cursor: pointer;
   position: absolute;
   text-align: center;
@@ -41,11 +53,23 @@ h1{
 
 #next {
     right: 10px;
+    width: 250px;
 }
 
-#next:hover, #prev:hover {
+#prev {
+  width: 250px;
+}
+
+#choice {
+  justify-content: center;
+  width: 300px;
+  right: 525px;
+}
+
+#next:hover, #prev:hover, #choice:hover {
     color: #eea6fc;
     background-color: black;
     transition-duration: .2s;
+    transition: .2s;
 }
 

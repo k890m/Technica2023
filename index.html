@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/charChoice.css" />
-    <title>3D Model Carousel Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Investing in Life</title>
   </head>
   <body>
     <h1>Choose Your Character</h1>
@@ -13,31 +19,132 @@
       <div id="slider">
         <div class="slide">
           <iframe
-            src="https://my.spline.design/mayowacopy-41e6dabafbe3166fcd9e374d5f460d93/"
-            frameborder="0"
-            width="100%"
-            height="100%"
-          ></iframe>
-        </div>
-        <div class="slide">
-          <iframe
             src="https://my.spline.design/mayowacopy-82a61d73429a043b8c9158d517214cf9/"
             frameborder="0"
             width="100%"
             height="100%"
           ></iframe>
         </div>
+        <div class="slide" style="padding-top: 15px; padding-right: 50px">
+          <p
+            class="Maya"
+            style="padding-top: 15px; padding-right: 50px; font-size: 13px"
+          >
+            Owns a pet cat that eats frequently and only a specific brand of
+            food that is expensive.
+          </p>
+          <br />
+          <p
+            class="Maya"
+            style="padding-top: 15px; padding-right: 50px; font-size: 13px"
+          >
+            She has debts that were sent to collections, luckily they have not
+            accumulated any interest (for now).
+          </p>
+          <br />
+          <p
+            class="Maya"
+            style="padding-top: 15px; padding-right: 50px; font-size: 13px"
+          >
+            Her rent is 1,625 a month, gas and electric is separate/subject to
+            change. She has 12k in her savings.
+          </p>
+          <br />
+          <p
+            class="Maya"
+            style="padding-top: 15px; padding-right: 50px; font-size: 13px"
+          >
+            She applies to 20 jobs a day on Indeed and they either don't
+            respond, you get an interview but not a call back, or don’t pay well
+            enough.
+          </p>
+        </div>
+
         <div class="slide">
           <iframe
-            src="https://my.spline.design/estrella-0495556c89666380d7951f5ea4cc71d2/"
+            src="https://my.spline.design/mayowacopy-41e6dabafbe3166fcd9e374d5f460d93/"
             frameborder="0"
             width="100%"
             height="100%"
           ></iframe>
         </div>
+
+        <div class="slide" style="padding-top: 15px; padding-right: 50px">
+          <p
+            class="Mayowa"
+            style="padding-top: 15px; padding-right: 50px; font-size: 11px"
+          >
+            Mayowa has four children that all attend a private school that she
+            pays by semester to keep them in. They have expensive after school
+            activities that need monthly payments.
+          </p>
+          <br />
+          <p
+            class="Mayowa"
+            style="padding-top: 15px; padding-right: 50px; font-size: 11px"
+          >
+            Her children are picky eaters so groceries tend to be very
+            expensive. She works from home as her husband buys the groceries.
+            Downside is that he does not know how to budget, and he uses her
+            money and not his own.
+          </p>
+          <br />
+          <p
+            class="Mayowa"
+            style="padding-top: 15px; padding-right: 50px; font-size: 11px"
+          >
+            Although Mayowa is a great and reliable worker, she works crazy
+            hours and barely has time to spend with her family. Her children
+            miss her.
+          </p>
+          <br />
+          <p
+            class="Mayowa"
+            style="padding-top: 15px; padding-right: 50px; font-size: 11px"
+          >
+            Mayowa wants to cut her hours so she can spend more time with her
+            family, but this may affect her pay and her position in the company.
+          </p>
+        </div>
+        <div class="slide-E">
+          <iframe
+            src="https://my.spline.design/YNu4C-SZwvM9hN3q9RIfAe7F/"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+
+        <div class="slide" style="padding-top: 15px; padding-right: 50px">
+          <p style="padding-top: 15px; padding-right: 50px; font-size: 11px">
+            Estrella is currently taking five classes while also trying to start
+            up a small business. Her classes take up most of her time and it
+            costs a lot to fund her projects.
+            <br />
+          </p>
+
+          <p style="padding-top: 15px; padding-right: 50px; font-size: 11px">
+            She is bad at time management but has great ideas for her business
+            which would surely make her money. But, on top of paying for
+            college, school supplies. And working a minimum wage job, she does
+            not have enough to buy materials.
+          </p>
+          <br />
+          <p style="padding-top: 15px; padding-right: 50px; font-size: 11px">
+            Estrella is thinking of dropping some of her classes to have free
+            time to work on her business, but this will set her back with
+            graduating on time.
+          </p>
+          <br />
+          <p style="padding-top: 15px; padding-right: 50px; font-size: 11px">
+            She wants to draft a proposal letter to gain sponsors to help fully
+            fund her project.
+          </p>
+        </div>
       </div>
     </div>
     <div id="prev">Previous</div>
+    <div id="choice">Choose Player</div>
     <div id="next">Next</div>
 
     <script>
@@ -49,16 +156,14 @@
 
       prev.addEventListener("click", () => {
         if (currentIndex > 0) {
-          currentIndex--;
-        } else {
-          currentIndex = slides.length - 1;
+          currentIndex -= 2;
         }
         updateSlider();
       });
 
       next.addEventListener("click", () => {
         if (currentIndex < slides.length - 1) {
-          currentIndex++;
+          currentIndex += 2;
         } else {
           currentIndex = 0;
         }
