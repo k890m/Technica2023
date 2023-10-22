@@ -1,18 +1,77 @@
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Life Simulator</title>
-        <link rel="stylesheet" href="css/charChoice.css">
-    </head>
-    <body>
-        <section>
-            <h1>Life Simulator</h1>
-            <p>Choose Your Character</p>
-        </section>
-        <iframe src="https://my.spline.design/YNu4C-SZwvM9hN3q9RIfAe7F/" frameborder="0" width="100%" height="100%"></iframe>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/charChoice.css" />
+    <title>3D Model Carousel Slider</title>
+  </head>
+  <body>
+    <h1>Choose Your Character</h1>
 
-    </body>
+    <div id="slider-container">
+      <div id="slider">
+        <div class="slide">
+          <iframe
+            src="https://my.spline.design/mayowacopy-41e6dabafbe3166fcd9e374d5f460d93/"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+        <div class="slide">
+          <iframe
+            src="https://my.spline.design/mayowacopy-82a61d73429a043b8c9158d517214cf9/"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+        <div class="slide">
+          <iframe
+            src="https://my.spline.design/estrella-0495556c89666380d7951f5ea4cc71d2/"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div id="prev">Previous</div>
+    <div id="next">Next</div>
+
+    <script>
+      const slider = document.getElementById("slider");
+      const slides = document.querySelectorAll(".slide");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      let currentIndex = 0;
+
+      prev.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = slides.length - 1;
+        }
+        updateSlider();
+      });
+
+      next.addEventListener("click", () => {
+        if (currentIndex < slides.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlider();
+      });
+
+      function updateSlider() {
+        const slideWidth = slides[0].clientWidth;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      // Call updateSlider on page load
+      updateSlider();
+    </script>
+  </body>
 </html>

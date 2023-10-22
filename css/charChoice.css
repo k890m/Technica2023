@@ -1,33 +1,25 @@
-body {
-    margin: 0;
-    height: 100vh;
-    font-family: "Poppins", sans-serif;
-
+* {
+  background-color: #eea6fc;
 }
 
-iframe {
-    width: 100%;
-    margin-right: auto;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0; 
+#slider-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: resolute;
 }
 
-h1 {
-    font-family: 'Playfair Display';
-    font-size: 4rem;
-    margin-top: 3em;
-    margin-bottom: .3em;
+#slider {
+  display: flex;
+  height: 500px;
+  transition: transform 0.3s ease-in-out;
 }
 
-p {
-    font-size: 1.6rem;
-    font-weight: 300;
-    margin: 0;
+.slide {
+  min-width: 100%;
 }
 
-h1,p {
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+#prev,
+#next {
+  cursor: pointer;
 }
