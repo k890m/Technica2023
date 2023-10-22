@@ -144,7 +144,7 @@
       </div>
     </div>
     <div id="prev">Previous</div>
-    <div id="choice">Choose Player</div>
+    <div id="choice" onclick="document.location= 'Maya1.html'">Choose Player</div>
     <div id="next">Next</div>
 
     <script>
@@ -154,6 +154,7 @@
       const next = document.getElementById("next");
       let currentIndex = 0;
 
+      
       prev.addEventListener("click", () => {
         if (currentIndex > 0) {
           currentIndex -= 2;
@@ -174,8 +175,6 @@
         const slideWidth = slides[0].clientWidth;
         slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
       }
-
-      // Call updateSlider on page load
       updateSlider();
     </script>
   </body>
