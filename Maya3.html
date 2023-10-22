@@ -73,16 +73,71 @@
             <iframe src='https://my.spline.design/mayowacopy-82a61d73429a043b8c9158d517214cf9/' frameborder='0' width='100%' height='100%'></iframe>
         </article>
 
-        <article style="line-height: 1.5;"><a href="Maya4.html">A job that pays 20$ an hour but unreasonable hours with on-call possibilities.</a></article>
-        <article style="line-height: 1.5;"><a href="Maya4.html">A job that pays 18$ an hour but you work very few hours and less than 5 days a week.</a></article>
-        <article style="line-height: 1.5;"><a href="Maya4.html">A job that pays 15$ an hour but you have a consistent work schedule.</a></article>
-
+        <article style="line-height: 1.5;"><a href="Failure.html">A job that pays 20$ an hour but unreasonable hours with on-call possibilities.</a></article>
+        <article style="line-height: 1.5;"><a href="Neutral.html">A job that pays 18$ an hour but you work very few hours and less than 5 days a week.</a></article>
+        <article style="line-height: 1.5;"><a href="Victory.html">A job that pays 15$ an hour but you have a consistent work schedule.</a></article>
     </section>
 
 
     <p style="font-size: 15px; padding-right: 12%; text-align: right;">
         Please select what you think Maya should choose
     </p>
+
+    <script>
+        const scoreNow = localStorage.getItem("score");
+        const choiceA = document.getElementById("A");
+        const choiceB = document.getElementById("B");
+        const choiceC = document.getElementById("C");
+
+        choiceA.addEventListener("click", () => {
+          if(scoreNow == 3) {
+            location.href("Victory.html");
+        }
+
+        if(scoreNow < 2) {
+            location.href("Failure.html");
+        }
+
+        if(scoreNow == 2) {
+            location.href("Neutral.html");
+        }
+
+        });
+
+        choiceB.addEventListener("click", () => {
+       
+          if(scoreNow == 3) {
+            location.href("Victory.html");
+        }
+
+        if(scoreNow < 2) {
+            location.href("Failure.html");
+        }
+
+        if(scoreNow == 2) {
+            location.href("Neutral.html");
+        }
+
+        });
+
+  
+        choiceC.addEventListener("click", () => {
+          scoreNow++;
+          if(scoreNow == 3) {
+            location.href("Victory.html");
+        }
+
+        if(scoreNow < 2) {
+            location.href("Failure.html");
+        }
+
+        if(scoreNow == 2) {
+            location.href("Neutral.html");
+        }
+
+        });
+
+      </script>
 
 </body>
 </html>
