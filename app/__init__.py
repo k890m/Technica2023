@@ -26,10 +26,33 @@ char_data = [
 
 
 # ROUTES
-
 @app.route('/')
 def index():
     return render_template('index.html', char=char_data)
+
+@app.route('/Maya1')
+def maya_one():
+    return render_template('Maya1.html')
+
+@app.route('/Maya2')
+def maya_two():
+    return render_template('Maya2.html')
+
+@app.route('/Maya3')
+def maya_three():
+    return render_template('Maya3.html')
+
+@app.route('/Failure')
+def fail():
+    return render_template('Failure.html')
+
+@app.route('/Neutral')
+def neutral():
+    return render_template('Neutral.html')
+
+@app.route('/Victory')
+def victory():
+    return render_template('Victory.html')
 
 
 if __name__ == "__name__":
