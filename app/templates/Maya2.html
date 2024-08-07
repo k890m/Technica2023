@@ -12,11 +12,11 @@
       rel="stylesheet"
     />
 
-    <title>Maya 1</title>
+    <title>Maya 2</title>
     <style>
       body {
         font-family: "Press Start 2P";
-        font-size: 1em;
+        font-size: 12px;
         background-color: palevioletred;
         color: white;
         text-align: center;
@@ -65,8 +65,8 @@
         line-height: 1.5;
       "
     >
-      Maya is struggling to acquire a job <br />despite applying to 20 jobs a
-      day. <br />What should she do?
+      Maya has to figure out how to manage her
+      <br />grocery budget in order to save money. <br />What should she do?
     </h1>
 
     <section>
@@ -78,42 +78,40 @@
           height="100%"
         ></iframe>
       </article>
-        <article style="font-size: larger; line-height: 1.5">
-          <div class="A">
-            <a href="Maya2.html"
-              >Pay to have her resume reviewed and revised, but this option is
-              expensive.</a
-            >
-          </div>
-        </article>
-        <article style="font-size: larger; line-height: 1.5">
-          <div class="B">
-            <a href="Maya2.html"
-              >Pay to have her resume boosted on the site so it has a better
-              chance at being seen. This option is cheaper.</a
-            >
-          </div>
-        </article>
-        <article style="font-size: larger; line-height: 1.5">
-          <div class="C">
-            <a href="Maya2.html"
-              >Continue to apply to 20 jobs a day and hope for the best.</a
-            >
-          </div>
-        </article>
+
+      <article class="A" style="font-size: larger; line-height: 1.5">
+        <a href="Maya3"
+          >Pay for a membership at Sam’s club and buy in bulk. There is a risk
+          that Maya will be too lazy to meal prep which results in the spoilage
+          of food. Membership is cheap but buying in bulk may be expensive.</a
+        >
+      </article>
+      <article class="B" style="font-size: larger; line-height: 1.5">
+        <a href="Maya3"
+          >Shop locally and weekly at Target or Walmart. Depending on what you
+          buy it can be expensive, but you’re more likely to eat the food and
+          not have it go to waste.
+        </a>
+      </article>
+      <article class="C" style="font-size: larger; line-height: 1.5">
+        <a href="Maya3"
+          >Continuously buy fast food because it's cheap, but it has the risk of
+          adding up because of how frequently you have to eat.</a
+        >
+      </article>
     </section>
 
     <p style="font-size: 15px; padding-right: 12%; text-align: right">
       Please select what you think Maya should choose
     </p>
-
     <script>
+      const scoreNow = localStorage.getItem("score");
       const choiceA = document.getElementById("A");
       const choiceB = document.getElementById("B");
       const choiceC = document.getElementById("C");
 
       choiceA.addEventListener("click", () => {
-        localStorage.setItem("score", 1);
+        localStorage.setItem("score", scoreNow + 1);
       });
 
       choiceB.addEventListener("click", () => {
